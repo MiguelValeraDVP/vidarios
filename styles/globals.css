@@ -6,10 +6,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Eudoxus Sans", sans-serif;
+  font-family: 'Eudoxus Sans', sans-serif;
   scroll-behavior: smooth;
 }
 
+.gradient-01 {
+  background-image: linear-gradient(
+    270deg,
+    #00ff06,
+    #ea8a8a 26%,
+    #f0f4c2 39%,
+    #d8ff00 50%,
+    #e8ff00 61%,
+    #fdfdfd 74%,
+    #ff6e6e
+  );
+  filter: blur(125px);
+}
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04))
+    drop-shadow(0 4px 3px rgba(0, 0, 0, 0.4));
+}
+/* 
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
@@ -22,14 +40,12 @@
     hsl(220deg 76% 51%) 100%
   );
   filter: blur(125px);
-}
-
+} */
 .hero-gradient {
-  background: linear-gradient(
-    97.86deg,
-    #a509ff 0%,
-    #34acc7 53.65%,
-    #a134c7 100%
+  background: radial-gradient(
+    circle,
+    rgba(255, 204, 204, 1) 26%,
+    rgba(255, 241, 39, 1) 100%
   );
 }
 
@@ -39,8 +55,7 @@
   height: 438px;
   top: 0px;
   right: 0px;
-
-  background: #7aebfb;
+  background: #fff123;
   filter: blur(190px);
 }
 
@@ -58,8 +73,7 @@
   height: 800px;
   left: 20%;
   top: 5%;
-
-  background: rgba(149, 66, 232, 0.35);
+  background: #ffcccc85;
   filter: blur(175px);
   transform: rotate(-114.2deg);
 }
@@ -70,8 +84,7 @@
   height: 100vh;
   left: 30%;
   top: 10%;
-
-  background: rgba(45, 72, 152, 0.75);
+  background: hsla(56, 100%, 58%, 0.749);
   filter: blur(200px);
   transform: rotate(-53.13deg);
 }
@@ -83,6 +96,20 @@
     rgba(255, 255, 255, 0) 100%
   );
 }
+.gradient-06 {
+  position: absolute;
+  width: 304px;
+  height: 200px;
+  left: 20%;
+  top: 5%;
+
+  /* background: hsla(0, 100%, 90%, 0.35); */
+  /* background: rgba(149, 66, 232, 0.35); */
+  background: #ffcccc85;
+
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
 
 .feedback-gradient {
   position: absolute;
@@ -91,7 +118,7 @@
   left: 0px;
   top: 0px;
 
-  background: #8d39a3;
+  background: #ffcccc85;
   filter: blur(175px);
 }
 
@@ -104,4 +131,13 @@
 
   background: #65c4fa;
   filter: blur(150px);
+}
+
+.text-shadow {
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.d-shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

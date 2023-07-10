@@ -1,38 +1,45 @@
 import { Footer, Navbar } from '../components';
+import WhatsappButton from '../components/WhatsappButton';
 import {
   About,
+  Contact,
   Explore,
   Feedback,
   GetStarted,
   Hero,
   Insights,
-  WhatsNew,
-  World,
+  // Contact,
+  OurProducts,
 } from '../sections';
 
 const Page = () => (
-  <div className="bg-primary-black overflow-hidden ">
+  <div className="bg-white overflow-hidden ">
     <div className="w-[90%] m-auto">
-      <Navbar />
-      <Hero />
+      <div className="max-h-[100vh]">
+        <WhatsappButton />
+        <Navbar />
+        <Hero />
+      </div>
       <div className="relative">
         <About />
-        <div className="gradient-03 z-0" />
+        {/* <div className="gradient-03 z-0" /> */}
         <Explore />
       </div>
       <div className="relative">
         <GetStarted />
         <div className="gradient-04 z-0" />
-        <WhatsNew />
-      </div>
-      <World />
-      <div className="relative">
         <Insights />
-        <div className="gradient-04 z-0" />
-        <Feedback />
       </div>
-      <Footer />
+      {/* <div className="gradient-03 z-0" /> */}
+      <OurProducts />
+
+      <div className="relative">
+        <div className="gradient-03 z-0" />
+        <Feedback id="meetVidariosOwners" />
+        <Contact />
+      </div>
     </div>
+    <Footer />
   </div>
 );
 

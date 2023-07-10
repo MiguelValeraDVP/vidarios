@@ -87,6 +87,22 @@ export const textVariant2 = {
   },
 };
 
+export const iconsVariant = (delay) => ({
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'tween',
+      ease: 'easeIn',
+      delay,
+    },
+  },
+});
+
 export const fadeIn = (direction, type, delay, duration) => ({
   hidden: {
     x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,

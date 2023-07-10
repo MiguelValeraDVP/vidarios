@@ -2,56 +2,91 @@
 
 import { motion } from 'framer-motion';
 import styles from '../styles';
-import { fadeIn, staggerContainer, zoomIn } from '../utils/motion';
+import { fadeIn, staggerContainer } from '../utils/motion';
 import { TypingText } from '../components';
 
 const Feedback = () => (
-  <section className={`${styles.paddings} relative z-10`}>
+  <section
+    className={`${styles.paddings} relative z-10`}
+    id="meetVidariosOwners"
+  >
+    <TypingText
+      title="| Conoce a los creadores"
+      textStyles="text-center my-[40px] "
+    />
     <motion.div
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-6`}
+      className={`${styles.innerWidth} mx-auto flex flex-col gap-6 `}
     >
-      <TypingText title="| Feedback" textStyles="text-center" />
-
-      <motion.div
-        variants={fadeIn('right', 'tween', 0.2, 1)}
-        className="flex-[0.5] lg:max-w-[370px] flex justify-end flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6a6a6a] relative"
-      >
-        <div className=" feedback-gradient" />
-        <div>
-          <h4 className=" font-bold sm:text-[32px] text-[26px] sm:leading-[40px] leading-[36px] text-white">
-            Miguel
-          </h4>
-          <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22px] leading-[16px] text-white">
-            Founder | Metaversus
-          </p>
-          <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45px] leading-[39px] text-white">
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
-            accusamus eius vitae doloremque voluptate harum, architecto soluta.
-            Nisi unde accusamus quo! Quos, minus. Exercitationem quae provident
-            rerum beatae harum laboriosam."
-          </p>
-        </div>
-      </motion.div>
-      <motion.div
-        variants={fadeIn('left', 'tween', 0.2, 1)}
-        className="relative flex-1 flex justify-center items-center  "
-      >
-        <img
-          src="/planet-09.png"
-          alt="planet-09"
-          className="w-full lg:h-[610px] h-auto min-h[210px] object-cover rounded-[40px]"
-        />
+      <div className="feedback-gradient" />
+      <div className="flex h-full items-center justify-center sm:flex-row flex-col ">
         <motion.div
-          variants={zoomIn(0.4, 1)}
-          className="lg:block hidden absolute -left-[10%] top-[3%]"
+          variants={fadeIn('right', 'tween', 0.2, 1)}
+          className="flex-1 w-full md:w-2/3 mb-2 h-[100%] sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6a6a6a] bg-[#fff127a4] relative mr-2 "
         >
-          <img src="/stamp.png" alt="stamp" className="w-[155px] h-[155px]" />
+          <h4 className="font-bold text-3xl sm:text-4xl text-black text-shadow leading-[1.25]">
+            Simon Cuberos
+          </h4>
+          <p className="mt-2 font-normal text-lg sm:text-xl text-[#40aa55] text-shadow leading-[1.375]">
+            CEO | Founder
+          </p>
+          <p className="mt-6 font-normal text-base sm:text-lg text-black text-shadow leading-[1.5]">
+            Mi nombre es Simón Cuberos, soy de Caracas, Venezuela y vivo hace 4
+            años en Montevideo. Vidarios para mí ha sido la herramienta de
+            expresión artística donde mi corazón y mi mente se unen con la
+            naturaleza para crear piezas irrepetibles. Me acercó al mundo de las
+            plantas para ayudarme a evolucionar como emprendedor y ofrecer
+            diseños de mayor calidad con gran nivel creativo. Queremos
+            convertirnos en referencia en cuanto al reciclaje del vidrio y
+            producir a través de la economía plateada.
+          </p>
         </motion.div>
-      </motion.div>
+        <motion.div
+          variants={fadeIn('left', 'tween', 0.2, 1)}
+          className="relative flex-1 flex justify-center items-center ml-2 mt-2"
+        >
+          <div className="w-full h-full rounded-[40px] overflow-hidden">
+            <img
+              src="/simon-cubero.jpeg"
+              alt="Simon CEO"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+      </div>
+      {/* Simon arriba, Ale abajo */}
+      <div className="flex h-full items-center justify-center sm:flex-row flex-col">
+        <motion.div
+          variants={fadeIn('left', 'tween', 0.2, 1)}
+          className="relative flex-1 flex justify-center items-center mr-2 mb-2"
+        >
+          <img
+            src="/alejandra-rivero.jpeg"
+            alt="Simon CEO"
+            className="w-full h-auto min-h-[210px] object-contain  rounded-[40px]"
+          />
+        </motion.div>
+        <motion.div
+          variants={fadeIn('right', 'tween', 0.2, 1)}
+          className="flex-1  w-full md:w-2/3  h-[100%] sm:p-8 p-4 rounded-[32px] border-[1px] border-[#6a6a6a] bg-[#fff127a4] relative ml-2 mt-2"
+        >
+          <h4 className=" font-bold sm:text-[32px] text-[26px] sm:leading-[40px] leading-[36px] text-black text-shadow">
+            Alejandra Rivero
+          </h4>
+          <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22px] leading-[16px] text-[#40aa55] text-shadow">
+            CEO | Founder |
+          </p>
+          <p className="mt-6 font-normal text-base sm:text-lg text-black text-shadow leading-[1.5]">
+            Hola, soy Alejandra. Me caracterizo por ser alegre y muy sensible.
+            Estudié comunicación social y, desde hace 3 años, soy parte de
+            Vidarios. Un emprendimiento en el que he colaborado desde la
+            organización financiera y las redes sociales.
+          </p>
+        </motion.div>
+      </div>
     </motion.div>
   </section>
 );
